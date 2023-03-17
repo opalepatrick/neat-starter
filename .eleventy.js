@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("currentYear", function () {
+    return new Date().getFullYear();
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
