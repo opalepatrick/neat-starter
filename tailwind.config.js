@@ -16,7 +16,7 @@ module.exports = {
         playfair: "Playfair"
       },
       fontSize: {
-        '12xl': '12rem'
+        '10xl': '10rem'
       },
       typography: {
         DEFAULT: {
