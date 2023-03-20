@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         opensans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
-        playfair: "Playfair"
+        display: ['Libre Baskerville', 'serif'],
       },
       fontSize: {
         '10xl': '10rem'
@@ -29,7 +29,11 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      fontFamily: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'font-display'],
+    },
+  },
   daisyui: {
     styled: true,
     themes: true,

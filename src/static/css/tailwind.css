@@ -4,13 +4,7 @@
 
 /*Your Custom CSS Goes here*/
 
-h1 {
-  @apply mb-3 text-4xl tracking-tighter text-center lg:text-7xl;
-}
 
-h3 {
-  @apply mb-3 text-2xl font-bold;
-}
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
