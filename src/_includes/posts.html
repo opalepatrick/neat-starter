@@ -2,20 +2,17 @@
 layout: default
 prism: true
 ---
-
+{% if post.data.image %}
+  <img src="{{ image }}" alt="{{ title }}" />
+{% endif %}
 <div class="container max-w-4xl px-6 mt-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="text-5xl font-bold font-display">{{title}}</h1>
-        <p class="text-base font-medium leading-6 text-center text-primary">
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
-
-            </time>
-        </p>
-
-    </div>
-    <article class="mx-auto my-4 prose lg:prose-xl">
-        {{ content | safe }}</article>
-
+  <article class="my-4 prose lg:prose-xl">
+    <h1 class="font-display">{{title}}</h1>
+    <p class="text-primary">
+      <time> 
+        {{ date | readableDate }} by <a>{{ author }}</a>
+      </time>
+    </p>
+    {{ content | safe }}
+  </article>
 </div>

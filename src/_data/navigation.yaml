@@ -3,6 +3,10 @@ items:
   - text: Subscribe
     url: "/subscribe"
   - text: Contact Us
-    url: "/contact"
+    url: "/contact-us"
   - text: Blog
     url: "/blog"
+  - text: Armchair Traveller
+    url: "/armchair-traveller"
+  - text: Slow Travel
+    url: "/slow-travel"

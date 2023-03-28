@@ -7,13 +7,10 @@ module.exports = {
     container: {
       center: true,
     },
-    // extend: {
-    //   colors: {},
-    // },
     extend: {
       fontFamily: {
-        opensans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
-        display: ['Libre Baskerville', 'serif'],
+        sans: ['"Open Sans"', 'serif'],
+        display: ['"Work Sans"', 'serif'],
       },
       fontSize: {
         '10xl': '10rem'
@@ -29,9 +26,13 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/typography")
+  ],
   variants: {
     extend: {
-      fontFamily: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'font-display'],
+      fontFamily: ['font-sans !important',  'font-display !important'],
     },
   },
   daisyui: {
@@ -45,11 +46,11 @@ module.exports = {
     themes: [
       {
         fhtt: {
-          "primary": "#0ea5e9",
+          "primary": "#374151",
           "secondary": "#84cc16",
           "accent": "#fde047",
-          "neutral": "#2B232F",
-          "base-100": "#F8F9FC",
+          "neutral": "#374151",
+          "base-100": "#ffffff",
           "info": "#96B3ED",
           "success": "#1CB575",
           "warning": "#F1DA74",
@@ -58,8 +59,4 @@ module.exports = {
       }
     ],
   },
-  plugins: [
-    require("daisyui"),
-    require("@tailwindcss/typography")
-  ],
 };
