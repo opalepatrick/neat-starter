@@ -30,7 +30,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Expat", "Slow Travel", "Resource"]
+        options: ["Expat", "Slow Travel", "Resource", "Armchair Traveller"]
   - label: "Settings"
     name: "settings"
     editor:
