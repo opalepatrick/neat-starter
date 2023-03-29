@@ -24,9 +24,9 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { name: image, label: Image, widget: image, required: true }
-      - widget: select
-        label: "tags"
+      - { label: "Image", name: "image", widget: image, required: true }
+      - label: "tags" 
+        widget: select
         name: "tags"
         multiple: true
         create: true
