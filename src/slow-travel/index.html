@@ -3,45 +3,40 @@ layout: blog
 ---
 
 <section class="mt-15">
-    {% for post in collections.post %}
-        {{ post.data.title }}: {{ post.data.tags }}
-        <p>{{ post.data.tags }}</p>
-    {% endfor %}
+  {% set postslist = collections.post | reverse %}
+  {% set filteredPosts = postslist.filter(post => post.data.tags.includes('Slow Travel')) %}
 
-    {% set postslist = collections.post | reverse %}
-    {% set filteredPosts = postslist.filter(post => post.data.tags.includes('Slow Travel')) %}
+  {% for post in filteredPosts | reverse %}
 
-    {% for post in filteredPosts | reverse %}
+      <article class="my-8 prose">
+          <h2 class="mb-2 font-display">
+              <a href="{{ post.url | url }}">
+                  {% if post.data.title %}
+                      {{ post.data.title }}
+                  {% else %}
+                      Untitled
+                  {% endif %}
+              </a>
+          </h2>
+          <p class="mb-3 leading-6 ">
+              <time>
+                  {{ post.date | readableDate }}
+                  by
+                  <a>{{ post.data.author }}</a>
 
-        <article class="my-8 prose">
-            <h2 class="mb-2 font-display">
-                <a href="{{ post.url | url }}">
-                    {% if post.data.title %}
-                        {{ post.data.title }}
-                    {% else %}
-                        Untitled
-                    {% endif %}
-                </a>
-            </h2>
-            <p class="mb-3 leading-6 ">
-                <time>
-                    {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
+              </time>
+          </p>
+          {% if post.data.description %}
+              <p class="mb-3">
+                  {{ post.data.description }}
+              </p>
+          {% endif %}
 
-                </time>
-            </p>
-            {% if post.data.description %}
-                <p class="mb-3">
-                    {{ post.data.description }}
-                </p>
-            {% endif %}
+          <p>
+              <a href="{{ post.url | url }}" class="font-bold text-primary">
+                  Read more →
+          </p>
 
-            <p>
-                <a href="{{ post.url | url }}" class="font-bold text-primary">
-                    Read more →
-            </p>
-
-        </article>
-    {% endfor %}
+      </article>
+  {% endfor %}
 </section>
