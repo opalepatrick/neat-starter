@@ -3,6 +3,10 @@ layout: blog
 ---
 
 <section class="mt-15">
+    {% for post in collections.post %}
+        {{ post.data.title }}: {{ post.data.tags }}
+    {% endfor %}
+
     {% set postslist = collections.post | reverse %}
     {% set filteredPosts = postslist.filter(post => post.data.tags.includes('Slow Travel')) %}
 
