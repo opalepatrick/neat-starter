@@ -5,6 +5,7 @@ layout: blog
 <section class="mt-15">
     {% for post in collections.post %}
         {{ post.data.title }}: {{ post.data.tags }}
+        <p>{{ post.data.tags }}</p>
     {% endfor %}
 
     {% set postslist = collections.post | reverse %}
