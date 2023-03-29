@@ -10,7 +10,7 @@ tags:
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et magnis dis parturient montes. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Urna neque viverra justo nec ultrices dui. Sagittis vitae et leo duis ut. Elementum nibh tellus molestie nunc non blandit massa enim nec. Porttitor eget dolor morbi non arcu risus quis varius quam. Fringilla urna porttitor rhoncus dolor purus non. Eu turpis egestas pretium aenean. Nulla pellentesque dignissim enim sit. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus. Nunc pulvinar sapien et ligula. Eu consequat ac felis donec et odio pellentesque.
 
-https://amzn.to/3U7zHc5
+<https://amzn.to/3U7zHc5>
 
 Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Pellentesque id nibh tortor id aliquet lectus proin. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Netus et malesuada fames ac. Sollicitudin ac orci phasellus egestas. Arcu vitae elementum curabitur vitae. Sed cras ornare arcu dui vivamus arcu felis. Tristique nulla aliquet enim tortor at auctor urna. Arcu ac tortor dignissim convallis aenean. Praesent tristique magna sit amet. A lacus vestibulum sed arcu non. Ac feugiat sed lectus vestibulum. Amet justo donec enim diam vulputate ut pharetra sit. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Scelerisque viverra mauris in aliquam.
 
