@@ -3,7 +3,7 @@ layout: blog
 ---
 
 <section class="mt-15">
-    {% set postslist = collections.post | whereIn: "data.tags", ["Slow Travel"] %}
+    {% set postslist = collections.post | whereIn: "post.data.tags", ["Slow Travel"] %}
 
     {% for post in postslist | reverse %}
         <article class="my-8 prose">
