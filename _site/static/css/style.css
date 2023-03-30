@@ -2272,11 +2272,6 @@ html {
   gap: 1rem;
 }
 
-.bg-\[\#000000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#f2f1f0\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 241 240 / var(--tw-bg-opacity));
@@ -2295,6 +2290,10 @@ html {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-opacity-50 {
@@ -2335,8 +2334,9 @@ html {
   padding-right: 1.5rem;
 }
 
-.text-center {
-  text-align: center;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .font-display {
@@ -2352,6 +2352,11 @@ html {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -2363,11 +2368,6 @@ html {
 
 .leading-6 {
   line-height: 1.5rem;
-}
-
-.text-\[\#ffffff\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-base-100 {

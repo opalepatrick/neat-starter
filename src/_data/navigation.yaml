@@ -10,3 +10,5 @@ items:
     url: "/armchair-traveller"
   - text: Slow Travel
     url: "/slow-travel"
+  - text: Expat
+    url: "/expat"
