@@ -1,38 +1,95 @@
-<div class="min-h-full py-8 mb-6 hero" style="background-image: url(/static/img/mdina_sky_cropped.jpg);">
-  <div class="bg-black hero-content bg-opacity-40">
-    <div class="max-w-md prose text-white ">
-      <h1 class="text-white font-display">Welcome</h1>
-      <p>This is your place if you are curious about living abroad (Armchair Traveller), or if you are slowly travelling through countries, stopping for months or years at a time (Slow Travel), or even if you are permanently based away from your original country (Expat). In any case, you are welcome and we hope you enjoy and contribute. We are always interested in YOUR life and experience.</p>
-      <button class="btn btn-primary">Get Started</button>
+<div class="container grid gap-6 p-4 mb-6 md:p-0 grid-col-1 lg:grid-cols-3">
+  <div class="flex flex-col p-8 bg-primary">
+    <div class="max-w-md mb-6 prose text-white">
+      <h2 class="text-white">Armchair Traveller</h2>
+      <p>Before we lived in other countries, we devoured travel books by the great and the not so great. This is where we will review classic and current travel literature.</p>
     </div>
+    <button class="mt-auto w-36 btn btn-accent"><a href="/armchair-traveller">Get Started</a></button>
+  </div>
+  <div class="flex flex-col p-8 bg-primary">
+    <div class="max-w-md mb-6 prose text-white">
+      <h2 class="text-white">Expat Living</h2>
+      <p>Expat living. Not the same as going on holiday! We will have articles, blog posts and nuggets of wisdom from people who have lived as expats or are permanent expats.</p>
+    </div>
+    <button class="mt-auto w-36 btn btn-accent"><a href="/expat-living">Get Started</a></button>
+  </div>
+  <div class="flex flex-col p-8 bg-primary">
+    <div class="max-w-md mb-6 prose text-white">
+      <h2 class="text-white">Slow Travel</h2>
+      <p>Slow travel is defined in many ways. It can mean making less impact on the planet, or the way that we see it, spending at least long enough to find out a bit about living in a particular place. We want to hear the stories and experiences.</p>
+      
+    </div>
+    <button class="mt-auto w-36 btn btn-accent"><a href="/slow-travel">Get Started</a></button>
   </div>
 </div>
 {% set postslist = collections.post %}
-<div class="container flex flex-wrap justify-center gap-4">
-  {% for post in postslist | reverse %}
-  <div class="w-full mx-4 prose shadow-xl md:mx-0 sm:w-72 card bg-base-100">
-    <div class="card-body">
-      <h2 class="card-title">
-        <a class="text-display" href="{{ post.url | url }}">
-          {% if post.data.title %}
-            {{ post.data.title }}
-          {% else %}
-            Untitled
-          {% endif %}
-        </a>
-      </h2>
-      {% if post.data.description %}
-        <p class="mb-3">
-          {{ post.data.description }}
+<div class="container mb-6">
+  {% if postslist | length > 0 %}
+    {% set firstPost = postslist | reverse | first %}
+    <div class="grid gap-6 p-4 lg:grid-cols-4 lg:p-0">
+      <div class="lg:col-span-3">
+        <!-- <figure> -->
+          <img src="{{ firstPost.data.image }}" alt="
+            {% if firstPost.data.title %}
+              {{ firstPost.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}" 
+            class="w-full h-auto object-fit-cover"
+          />
+        <!-- </figure> -->
+      </div>
+      <div class="prose lg:col-span-1">
+        <h2 class="card-title text-display">
+          <a class="text-display" href="{{ firstPost.url | url }}">
+            {% if firstPost.data.title %}
+              {{ firstPost.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}
+          </a>
+        </h2>
+        {% if firstPost.data.description %}
+          <p class="mb-3">
+            {{ firstPost.data.description }}
+          </p>
+        {% endif %}
+        <p>
+          <a href="{{ firstPost.url | url }}" class="font-bold text-primary">
+            Read more →
+          </a>
         </p>
-      {% endif %}
-      <p>
-        <a href="{{ post.url | url }}" class="font-bold text-primary">
-          Read more →
-        </a>
-      </p>
+      </div>
     </div>
-    <figure><img src="/static/img/pic10.jpg" alt="Shoes" /></figure>
-  </div>
+  {% endif %}
+</div>
+<div class="container flex flex-wrap justify-center gap-4">
+  {% for post in postslist | reverse | offset(1) | limit(6) %}
+    <div class="w-full mx-4 prose shadow-xl md:mx-0 sm:w-72 card bg-base-100">
+      <div class="card-body">
+        <h2 class="card-title">
+          <a class="text-display" href="{{ post.url | url }}">
+            {% if post.data.title %}
+              {{ post.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}
+          </a>
+        </h2>
+        {% if post.data.description %}
+          <p class="mb-3">
+            {{ post.data.description }}
+          </p>
+        {% endif %}
+        <p>
+          <a href="{{ post.url | url }}" class="font-bold text-primary">
+            Read more →
+          </a>
+        </p>
+      </div>
+      <figure><img src="{{ post.data.image }}" alt="Shoes" /></figure>
+    </div>
   {% endfor %}
 </div>
+
+

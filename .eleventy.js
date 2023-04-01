@@ -21,6 +21,14 @@ module.exports = function (eleventyConfig) {
     return new Date().getFullYear();
   });
 
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
+
+  eleventyConfig.addFilter("offset", function(array, count) {
+    return array.slice(count);
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 

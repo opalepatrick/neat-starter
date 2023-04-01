@@ -46,14 +46,22 @@ module.exports = {
     themes: [
       {
         fhtt: {
-          "primary": "#374151",
-          "secondary": "#84cc16",
+          "primary": "#1e3150",
+          
+          "secondary": "#25529c",
+                   
           "accent": "#fde047",
+                   
           "neutral": "#374151",
+                   
           "base-100": "#ffffff",
-          "info": "#96B3ED",
+                   
+          "info": "#00c4cc",
+                   
           "success": "#1CB575",
+                   
           "warning": "#F1DA74",
+                   
           "error": "#E6334B",
         },
       }
