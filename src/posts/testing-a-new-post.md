@@ -4,7 +4,7 @@ description: A post that has the option of add ing an image that will go on the
   blog opage as well as the home page and the post itself
 author: Aidan Anthony
 date: 2023-03-28T15:25:50.539Z
-image: /static/img/antoine-beauvillain-0kw44elhn3a-unsplash_1200_800.jpg
+image: /static/img/ryan-spencer-XGKaRnWjv1c-unsplash.jpg
 tags:
   - Slow Travel
 ---
