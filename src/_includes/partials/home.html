@@ -1,29 +1,6 @@
-<div class="container grid gap-6 p-4 mb-6 md:p-0 grid-col-1 lg:grid-cols-3">
-  <div class="flex flex-col p-8 bg-primary">
-    <div class="max-w-md mb-6 prose text-white">
-      <h2 class="text-white">Armchair Traveller</h2>
-      <p>Before we lived in other countries, we devoured travel books by the great and the not so great. This is where we will review classic and current travel literature.</p>
-    </div>
-    <button class="mt-auto w-36 btn btn-accent"><a href="/armchair-traveller">Get Started</a></button>
-  </div>
-  <div class="flex flex-col p-8 bg-primary">
-    <div class="max-w-md mb-6 prose text-white">
-      <h2 class="text-white">Expat Living</h2>
-      <p>Expat living. Not the same as going on holiday! We will have articles, blog posts and nuggets of wisdom from people who have lived as expats or are permanent expats.</p>
-    </div>
-    <button class="mt-auto w-36 btn btn-accent"><a href="/expat-living">Get Started</a></button>
-  </div>
-  <div class="flex flex-col p-8 bg-primary">
-    <div class="max-w-md mb-6 prose text-white">
-      <h2 class="text-white">Slow Travel</h2>
-      <p>Slow travel is defined in many ways. It can mean making less impact on the planet, or the way that we see it, spending at least long enough to find out a bit about living in a particular place. We want to hear the stories and experiences.</p>
-      
-    </div>
-    <button class="mt-auto w-36 btn btn-accent"><a href="/slow-travel">Get Started</a></button>
-  </div>
-</div>
+
 {% set postslist = collections.post %}
-<div class="container mb-6">
+<div class="p-4 m-4 bg-white border lg:p-6 lg:m-6 border-grey">
   {% if postslist | length > 0 %}
     {% set firstPost = postslist | reverse | first %}
     <div class="grid gap-6 p-4 lg:grid-cols-4 lg:p-0">
@@ -40,6 +17,7 @@
         <!-- </figure> -->
       </div>
       <div class="prose lg:col-span-1">
+        <div class="divider">FEATURED</div>
         <h2 class="card-title text-display">
           <a class="text-display" href="{{ firstPost.url | url }}">
             {% if firstPost.data.title %}
@@ -63,33 +41,66 @@
     </div>
   {% endif %}
 </div>
-<div class="container flex flex-wrap justify-center gap-4">
-  {% for post in postslist | reverse | offset(1) | limit(6) %}
-    <div class="w-full mx-4 prose shadow-xl md:mx-0 sm:w-72 card bg-base-100">
-      <div class="card-body">
-        <h2 class="card-title">
-          <a class="text-display" href="{{ post.url | url }}">
-            {% if post.data.title %}
-              {{ post.data.title }}
-            {% else %}
-              Untitled
-            {% endif %}
-          </a>
-        </h2>
-        {% if post.data.description %}
-          <p class="mb-3">
-            {{ post.data.description }}
-          </p>
-        {% endif %}
-        <p>
-          <a href="{{ post.url | url }}" class="font-bold text-primary">
-            Read more →
-          </a>
-        </p>
+
+<div class="container p-4 mb-6 md:p-0">
+  <div class="divider">EXPLORE</div>
+  <div class="grid gap-6 grid-col-1 lg:grid-cols-3">
+    <div class="flex flex-col p-8 bg-primary">
+      <div class="max-w-md mb-6 prose text-white">
+        <h2 class="text-white">Armchair Traveller</h2>
+        <p>Before we lived in other countries, we devoured travel books by the great and the not so great. This is where we will review classic and current travel literature.</p>
       </div>
-      <figure><img src="{{ post.data.image }}" alt="Shoes" /></figure>
+      <button class="w-24 mt-auto btn btn-accent"><a href="/armchair-traveller">More...</a></button>
     </div>
-  {% endfor %}
+    <div class="flex flex-col p-8 bg-primary">
+      <div class="max-w-md mb-6 prose text-white">
+        <h2 class="text-white">Expat Living</h2>
+        <p>Expat living. Not the same as going on holiday! We will have articles, blog posts and nuggets of wisdom from people who have lived as expats or are permanent expats.</p>
+      </div>
+      <button class="w-24 mt-auto btn btn-accent"><a href="/expat-living">More...</a></button>
+    </div>
+    <div class="flex flex-col p-8 bg-primary">
+      <div class="max-w-md mb-6 prose text-white">
+        <h2 class="text-white">Slow Travel</h2>
+        <p>Slow travel is defined in many ways. It can mean making less impact on the planet, or the way that we see it, spending at least long enough to find out a bit about living in a particular place. We want to hear the stories and experiences.</p>
+        
+      </div>
+      <button class="w-24 mt-auto btn btn-accent"><a href="/slow-travel">More...</a></button>
+    </div>
+  </div>
 </div>
-
-
+<div>
+  <div class="p-4 divider lg:p-6">LATEST ARTICLES</div>
+  <div class="grid gap-4 p-4 lg:gap-6 lg:p-6 md:grid-cols-2">
+    {% for post in postslist | reverse | offset(1) | limit(4) %}
+    <div class="w-full max-w-sm border lg:max-w-full lg:flex border-grey">
+      <div class="flex-none h-48 overflow-hidden text-center bg-cover lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" style="background-image: url('{{ post.data.image }}')" title="
+          {% if post.data.title %}
+          {{ post.data.title }}
+        {% else %}
+          Untitled
+        {% endif %}
+        ">
+      </div>
+      <div class="flex flex-col justify-between p-4 leading-normal bg-white ">
+        <div class="mb-8 prose">
+          <div class="mb-2 text-xl font-bold text-gray-900">
+            <h2><a class="text-primary text-display" href="{{ post.url | url }}">
+              {% if post.data.title %}
+                {{ post.data.title }}
+              {% else %}
+                Untitled
+              {% endif %}
+            </a></h2>
+          </div>
+          {% if post.data.description %}
+            <p>
+              {{ post.data.description }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

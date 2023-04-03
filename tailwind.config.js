@@ -46,7 +46,7 @@ module.exports = {
     themes: [
       {
         fhtt: {
-          "primary": "#1e3150",
+          "primary": "#241b4d",
           
           "secondary": "#25529c",
                    

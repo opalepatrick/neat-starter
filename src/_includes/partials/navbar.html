@@ -1,8 +1,11 @@
-<div class="mb-8 navbar bg-[#1e3150]">
+<div class="mb-8 navbar bg-primary">
   <div class="navbar-start">
     <div class="dropdown">
-      <label tabindex="0" class="text-white btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      <!-- <button class="btn btn-circle btn-outline bg-primary-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white border-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button> -->
+      <label tabindex="0" class="text-white btn hover:btn-outline btn-circle bg-primary hover:bg-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
       {% if navigation.items %}
       <ul tabindex="0" class="p-2 mt-3 text-white shadow menu menu-compact dropdown-content bg-primary w-52">
@@ -17,24 +20,24 @@
   <div class="navbar-center">
     <div class="grid grid-col-1 sm:grid-cols-5">
       <div class="flex items-center justify-center sm:justify-end sm:col-span-2">
-        <h1 class="text-4xl text-white font-display">
-          From Here
+        <h1 class="text-3xl text-white font-display">
+          FROM HERE
         </h1>
       </div>
       <div class="flex justify-center sm:col-span-1">
         <a href="/">
-          <img class="object-contain w-16" src="/static/graphics/fhtt_logo_010423_4.webp">
+          <img class="object-contain w-12" src="/static/graphics/fhtt_logo_010423_4.webp">
         </a>
       </div>
       <div class="flex items-center justify-center sm:justify-start sm:col-span-2">
-        <h1 class="text-4xl text-white font-display">
-          To There
+        <h1 class="text-3xl text-white font-display">
+          TO THERE
         </h1>
       </div>
     </div>
   </div>
   <div class="navbar-end">
-    <button class="btn btn-ghost btn-circle">
+    <button class="text-white btn hover:btn-outline btn-circle bg-primary hover:bg-primary">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24">
         <!-- <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none" /> -->
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="white"/>
