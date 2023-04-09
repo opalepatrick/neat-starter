@@ -61,6 +61,17 @@
 
       </style>
     {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+    <script type="text/javascript">
+      algoliasearchNetlify({
+        appId: 'GZBX9Q019P',
+        apiKey: 'adfba2d3bc91c3cf1e95fc2600901a04',
+        siteId: '87128f7f-47f3-4690-92cf-2ef05c292076',
+        branch: 'master',
+        selector: 'div#search',
+      });
+    </script>
   </head>
   <body>
     {% include "./partials/navbar.html" %}
