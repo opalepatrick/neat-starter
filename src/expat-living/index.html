@@ -26,6 +26,9 @@ layout: blog
                   {% endif %}
                 </a></h2>
               </div>
+              <p class="mb-3 leading-6">
+                <time>{{ post.date | readableDate }} by <a href="{{ post.url | url }}" class="font-bold">{{ post.data.author }}</a></time>
+              </p>
               {% if post.data.description %}
                 <p>
                   {{ post.data.description }}

@@ -2,7 +2,7 @@
 layout: blog
 ---
 
-<section class="mt-15">
+<!-- <section class="mt-15">
     <h1 class="text-4xl font-display">Our Blog Posts</h1>
     {% set postslist = collections.post %}
 
@@ -37,4 +37,46 @@ layout: blog
 
         </article>
     {% endfor %}
-</section>
+</section> -->
+<div class="p-4 divider lg:p-6">OUR BLOG POSTS</div>
+<section class="grid gap-4 p-4 mt-15 lg:gap-6 lg:p-6 md:grid-cols-2">
+    {% for post in collections.post %}
+      {% if post.data.tags | reverse | limit(12) %}
+        <div class="w-full max-w-sm border lg:max-w-full lg:flex border-grey">
+          <div class="flex-none h-48 overflow-hidden text-center bg-cover lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" style="background-image: url('{{ post.data.image }}')" title="
+              {% if post.data.title %}
+              {{ post.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}
+            ">
+          </div>
+          
+          <div class="flex flex-col justify-between p-4 leading-normal bg-white ">
+            <div class="mb-8 prose">
+              <div class="mb-2 text-xl font-bold text-gray-900">
+                <h2><a class="text-primary text-display" href="{{ post.author.url | url }}">
+                  {% if post.data.title %}
+                    {{ post.data.title }}
+                  {% else %}
+                    Untitled
+                  {% endif %}
+                </a></h2>
+              </div>
+              <p class="mb-3 leading-6">
+                <time>{{ post.date | readableDate }} by <a href="{{ post.url | url }}" class="font-bold">{{ post.data.author }}</a></time>
+              </p>
+              {% if post.data.description %}
+                <p>
+                  {{ post.data.description }}
+                </p>
+              {% endif %}
+            </div>
+            <p>
+              <a href="{{ post.data.url | url }}" class="font-bold text-primary">Read more →</a>
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
