@@ -47,21 +47,13 @@ module.exports = {
       {
         fhtt: {
           "primary": "#241b4d",
-          
-          "secondary": "#25529c",
-                   
+          "secondary": "#3e2e84",
           "accent": "#fde047",
-                   
-          "neutral": "#374151",
-                   
+          "neutral": "#5e46c9",
           "base-100": "#ffffff",
-                   
           "info": "#00c4cc",
-                   
           "success": "#1CB575",
-                   
           "warning": "#F1DA74",
-                   
           "error": "#E6334B",
         },
       }
