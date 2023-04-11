@@ -15,3 +15,8 @@ body pre[class*="language-"] {
 html {
   font-size: 18px;
 }
+
+.hover\:btn-outline:hover {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}

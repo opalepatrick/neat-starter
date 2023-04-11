@@ -2864,6 +2864,11 @@ html {
   font-size: 18px;
 }
 
+.hover\:btn-outline:hover {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
 .hover\:btn-outline:hover .badge {
   --tw-border-opacity: 1;
   border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
