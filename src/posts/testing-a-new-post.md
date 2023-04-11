@@ -1,7 +1,7 @@
 ---
 title: Testing a new post
 description: A post that has the option of add ing an image that will go on the
-  blog opage as well as the home page and the post itself
+  blog page as well as the home page and the post itself
 author: Aidan Anthony
 date: 2023-03-28T15:25:50.539Z
 image: /static/img/ryan-spencer-xgkarnwjv1c-unsplash_landscape_1200.jpg
