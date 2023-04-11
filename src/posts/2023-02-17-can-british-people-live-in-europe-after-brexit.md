@@ -3,11 +3,9 @@ title: Welcome to From Here to There
 description: Introductory post to From Here to There
 author: Aidan Anthony
 date: 2023-02-17T15:13:13.021Z
-tags:
-  - travel
-  - expat
-  - reviews
 image: /static/img/mantas-hesthaven-g1WdcKcV3w-unsplash_720.jpg
+tags:
+  - Expat
 ---
 
 ![Alt text]({{ image | url }})
