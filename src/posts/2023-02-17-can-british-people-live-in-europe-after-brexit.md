@@ -3,12 +3,11 @@ title: Welcome to From Here to There
 description: Introductory post to From Here to There
 author: Aidan Anthony
 date: 2023-02-17T15:13:13.021Z
-tags:
-  - expat
 image: /static/img/mantas-hesthaven-g1WdcKcV3w-unsplash_720.jpg
+tags:
+  - Expat
 ---
-
-![Alt text]({{ image | url }})
+![Alt text](/static/img/mantas-hesthaven-g1WdcKcV3w-unsplash_720.jpg "Title text")
 
 I have always felt the need to travel, to see other countries, meet other people, investigate other cultures and habits. I have wanted to connect with other humans. I am less interested in what divides us. I like to know the issues but differences are less interesting in comparison to what unites us.
 
@@ -20,13 +19,9 @@ We will review books, videos and podcasts that are about travelling to other cou
 
 Even though this is a UK based website, by it's very nature, we will be talking about everything and anything to do with travel and living away from wherever you started.
 
-
-
 The foldable Coffee-to-go Mug Muc My useful Cup
 
-
-
----
+- - -
 
 {% for tag in page.tags %}
 **{{ tag }}** {% endfor %}
