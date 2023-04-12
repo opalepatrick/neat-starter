@@ -4,9 +4,7 @@ description: Introductory post to From Here to There
 author: Aidan Anthony
 date: 2023-02-17T15:13:13.021Z
 tags:
-  - travel
   - expat
-  - reviews
 image: /static/img/mantas-hesthaven-g1WdcKcV3w-unsplash_720.jpg
 ---
 
