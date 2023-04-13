@@ -8,7 +8,7 @@
       <ul tabindex="0" class="p-2 mt-3 text-white shadow menu menu-compact dropdown-content bg-primary w-52">
         <a href="/">Home</a>
         {% for item in navigation.items %}
-          <a @click="isOpen = false" href="{{ item.url }}">{{ item.text }}</a>
+          <a class="top_menu" @click="isOpen = false" href="{{ item.url }}">{{ item.text }}</a>
         {% endfor %}
       </ul>
       {% endif %}
